@@ -1,0 +1,60 @@
+@import "../App.scss";
+
+h1{
+    font-size: 1.5em;
+    text-align: center;
+    background-color: $secondary;
+    padding: 1%;
+}
+.cost-sheet{
+    margin: 2%;
+
+    .col-cell{
+        border: .3px solid rgb(240, 240, 240);
+        
+    }
+    .col-cell-inner{
+        border: .3px solid rgb(240, 240, 240);
+        
+    }
+    .col-cell2{
+        border: .3px solid rgb(240, 240, 240);
+    }
+    p{
+        margin: 0 !important;
+    }
+    
+}
+.flex-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.boldtext{
+    font-weight: bold;
+}
+.bgyellow{
+    background-color: yellow;
+}
+
+.secbold{
+    background-color: $secondary;
+    font-weight: bold;
+}
+
+.note-head{
+    background-color: #f7f7f7;
+    padding: 1%;
+    border-radius: 10px;
+    margin: 1% 0;
+}
+
+.sign{
+    margin-top: 6% !important;
+    .sign-cont{
+        border-top: 1px solid black;
+        text-align: center;
+        padding: 1%;
+    }
+}
