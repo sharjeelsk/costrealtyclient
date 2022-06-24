@@ -65,7 +65,7 @@ function CostSheet(props) {
                     }if(key==="SHOP AREA (SFT)"){
                         //terraceSF=terraceSF+value
                         terraceSF=0
-                    }if(key==="SALEABLE"){
+                    }if(key==="SALEABLE" || key==="SALEABLE (sq ft)"){
                         saleable=saleable+value
                     }if(key==="Covered Car Parking Charges"){
                         carParkingCharges=carParkingCharges+value
@@ -492,7 +492,7 @@ function CostSheet(props) {
 
 
 <div className='note-head'>
-    <p className='note'>k) MAHARERA REGISTRATION NO: P52100019881 available on the website https://maharera.mahaonline.gov.in under registered projects.</p>
+    <p className='note'>k) MAHARERA REGISTRATION NO: P52100030060 available on the website https://maharera.mahaonline.gov.in under registered projects.</p>
 </div>
 
 <div className='note-head'>
@@ -500,16 +500,16 @@ function CostSheet(props) {
 </div>
 
 <div className='note-head'>
-    <p className='note'>m) All Cheques should be in the name of : Avishkar Arista Developers LLP .</p>
+    <p className='note'>m) All Cheques should be in the name of : A ADVANI PROPERTIES LLP LLP .</p>
 </div>
 
 
 <section className="row m-auto justify-content-between sign">
     <div className="col-3 sign-cont">
-        <p>For Avishkar Arista Developers LLP</p>
+        <p>For A ADVANI PROPERTIES LLP LLP</p>
     </div>
     <div className="col-3 sign-cont">
-        <p>For Avishkar Arista Developers LLP</p>
+        <p>For A ADVANI PROPERTIES LLP LLP</p>
     </div>
     <div className="col-3 sign-cont">
         <p>Customer Signature</p>
@@ -528,41 +528,3 @@ function CostSheet(props) {
 
 export default CostSheet
 
-        /* <table className="ui celled table">
-        <thead>
-            <tr><th>Name</th>
-            <th>Age</th>
-            <th>Job</th>
-        </tr></thead>
-        <tbody>
-            <tr>
-            <td  data-label="Name">Date of Booking</td>
-            <td   data-label="Age">24th May 2022 5:30pm</td>
-            </tr>
-            <tr>
-                <td>Name</td>
-                <td>Unit & Floor No</td>
-                <td>Office 5th Floor</td>
-            </tr>
-
-        </tbody>
-</table> */
-/* <table class="table table-bordered">
-  <tbody>
-    <tr>
-      <td colSpan="5">Date of Booking</td>
-      <td>May 5, 2022, 5:20:47 AM</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td colspan="2">Larry the Bird</td>
-      <td>@twitter</td>
-    </tr>
-  </tbody>
-</table> */
