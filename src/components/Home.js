@@ -81,7 +81,7 @@ function Home(props) {
             <Autocomplete
         value={value}
         onChange={(event, newValue) => {
-          getExcelData(options.indexOf(newValue)+2)
+          getExcelData(options.indexOf(newValue)+1)
           setValue(newValue);
         }}
         // getOptionDisabled={(option) =>
