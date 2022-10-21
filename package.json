@@ -47,7 +47,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  "proxy": "http://localhost:3002",
+  "proxy": "https://cost-realty-server.onrender.com",
   "eslintConfig": {
     "extends": [
       "react-app",

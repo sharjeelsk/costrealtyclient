@@ -8,6 +8,7 @@ import Autocomplete from '@mui/material/Autocomplete';
 import _ from 'lodash'
 import leftimg from './leftimg.jpeg'
 import rightimg from './rightimg.jpeg'
+import SimpleBackdrop from './SimpleBackdrop'
 const options = ['Ground Floor', '1st Floor','2nd Floor','5th Floor','6th Floor','7th Floor','8th Floor','9th Floor','10th Floor','11th Floor','12th Floor','13th Floor','14th Floor','15th Floor', '16th Floor'];
 function Home(props) {
     const [data,setData]=React.useState([])
@@ -15,8 +16,12 @@ function Home(props) {
     const [officeData,setOfficeData]=React.useState([])
     const [selectedOffice,setSelectedOffice]=React.useState([])
     const [rate,setRate]=React.useState(0)
+    const [car,setCar] = React.useState(0)
+    const [bike,setBike]=React.useState(0)
+    const [loading,setLoading]=React.useState(false)
 
     const getExcelData = (index)=>{
+        setLoading(true)
         axios.post(`${process.env.REACT_APP_PRODUCTION}/`,{sheet:index})
         .then(res=>{
             console.log(res)
@@ -40,6 +45,10 @@ function Home(props) {
                 })
             })
             setOfficeData(offices)
+            setLoading(false)
+        })
+        .catch(err=>{
+            setLoading(false)
         })
     }
 
@@ -60,11 +69,12 @@ function Home(props) {
             })
         })
         console.log(arr)
-        props.history.push("/costsheet",{sheets:arr,selectedOffice,rate,value})
+        props.history.push("/costsheet",{sheets:arr,selectedOffice,rate,value,car,bike})
     }
 
     return (
         <div>
+            <SimpleBackdrop open={loading} />
             <div className="row align-items-center m-auto justify-content-between">
             <div>
                 <img src={leftimg} alt="leftimg" />
@@ -109,6 +119,8 @@ function Home(props) {
         )}
       />
             <TextField onChange={(e)=>setRate(e.target.value)} className='my-3' fullWidth variant="outlined" id="outliend-basics" label="Rate Per Sq.ft Amount" />
+            <TextField value={car} onChange={(e)=>setCar(e.target.value)} className='my-3' fullWidth variant="outlined" id="outliend-basics" label="Car Parking" />
+            <TextField value={bike} onChange={(e)=>setBike(e.target.value)} className='my-3' fullWidth variant="outlined" id="outliend-basics" label="Car Parking" />
             <Button onClick={()=>handleSubmit()} variant="contained">Generate CostSheet</Button>
             </form>
         </div>

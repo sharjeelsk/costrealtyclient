@@ -85,6 +85,8 @@ function CostSheet(props) {
         })
         let totalCarpetAreaSM=carpetAreaSM+enclosedBalconySM+terraceSM;
         let totalCarpetAreaSF=carpetAreaSF+enclosedBalconySF+terraceSF;
+        bikeParkingCharges=bikeParkingCharges*parseInt(props.location.state.bike);
+        carParkingCharges=1000000*parseInt(props.location.state.car);
         basicValue=saleable*rate
         agreementCost = basicValue+carParkingCharges+bikeParkingCharges;
         otherCharges=dgBackupCharges+msebCharges+shareMoneyCharges;
