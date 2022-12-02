@@ -120,7 +120,7 @@ function Home(props) {
       />
             <TextField onChange={(e)=>setRate(e.target.value)} className='my-3' fullWidth variant="outlined" id="outliend-basics" label="Rate Per Sq.ft Amount" />
             <TextField value={car} onChange={(e)=>setCar(e.target.value)} className='my-3' fullWidth variant="outlined" id="outliend-basics" label="Car Parking" />
-            <TextField value={bike} onChange={(e)=>setBike(e.target.value)} className='my-3' fullWidth variant="outlined" id="outliend-basics" label="Car Parking" />
+            <TextField value={bike} onChange={(e)=>setBike(e.target.value)} className='my-3' fullWidth variant="outlined" id="outliend-basics" label="Bike Parking" />
             <Button onClick={()=>handleSubmit()} variant="contained">Generate CostSheet</Button>
             </form>
         </div>
